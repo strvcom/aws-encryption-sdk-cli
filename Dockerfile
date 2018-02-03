@@ -8,4 +8,5 @@ RUN apk add --no-cache --update --virtual .build-deps \
   libffi-dev \
   && pip3 install --no-cache-dir aws-encryption-sdk-cli \
   && apk del .build-deps
+WORKDIR /mnt/root
 ENTRYPOINT ["aws-encryption-cli"]
